@@ -273,7 +273,7 @@ def main():
                     (_, v_loss, v_summary) = sess.run(
                         (opt_apply, loss, summaries),
                         feed_dict={context: sample_batch()})
-                if v_loss < 2.5:
+                if v_loss < 0.08:
                     raise KeyboardInterrupt
                 summary_log.add_summary(v_summary, counter)
 
